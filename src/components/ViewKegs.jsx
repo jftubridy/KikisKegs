@@ -64,9 +64,14 @@ function ViewKegs(){
       <h1><style jsx> {`
     h1 {
       color: black;
+      padding: 15px;
+      margin: 15px;
+      border-style: solid;
+      border-color: black;
+      border-width: 1px;
     }
     h1:hover {
-      color: green;
+      color: purple;
     }
     `}</style>Kegs currently on Tap</h1>
      

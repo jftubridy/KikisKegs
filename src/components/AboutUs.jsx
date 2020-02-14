@@ -1,35 +1,48 @@
 import React from 'react';
-// import CEOHarold from '../assets/images/CEOHarold.jpg';
-// import ChiefEditorHarold from '../assets/images/ChiefEditorHarold.jpg';
-// import FinaceHarold from '../assets/images/FinanceHarold.jpg';
-// import ReceptionistHarold from '../assets/images/ReceptionistHarold.jpg';
-// import HrHarold from '../assets/images/HrHarold.jpg';
+import Bartender from '../assets/images/whatCanIGetYou.jpg';
+import { withRouter } from 'react-router-dom';
 
-function AboutUs(){
+
+function AboutUs() {
+  var myStyles = {
+    color: 'blue',
+    fontSize: '30px',
+    borderColor: 'white',
+    textShadowColor: 'white',
+    textShadowOffset: { width: 5, height: 5 },
+    textShadow: {
+      fontSize: 30,
+      color: 'black',
+      textShadowColor: 'white',
+      testShadowOffset: { width: 5, height: 5 },
+      textShadowRadius:10,
+    },
+    borderStyle: 'solid',
+    borderWidth: 3,
+    borderRadius: 600
+  };
   return (
-    <div>
-      <h1><style jsx> {`
-    h1 {
+    <div><style jsx> {`
+    p {
       color: black;
     }
-    h1:hover {
-      color: green;
+    p:hover {
+      color: orange;
+      font-size: 30px;
+      text-shadow: 0 0 3px #FF0444. 0 0 5px #0000FF;
+      textShadow: {
+        font-size: 30;
+        color: black;
+        text-shadow-color: white;
+        text-shadow-offset: { width: 5, height: 5 };
+        text-shadow-radius:10
+      },
     }
-    `}</style>About Us</h1>
-      {/* <h1>CEO</h1>
-      <img src={CEOHarold}/>
+    `}</style>
+      <h1>Owner</h1>
+      <img src={Bartender} />
+      <p style={myStyles}>Hi I'm Kiki.  In my youth I owned a delivery service, but now I run this wonderful Tap House.  We have an exstensive and growing list of beverages on tap, and I'm willing to fly to remote locations to obtain even the most obscure refreshments!</p>
       <hr/>
-      <h1>Chief Editor</h1>
-      <img src={ChiefEditorHarold}/>
-      <hr/>
-      <h1>VP of Finance</h1>
-      <img src={FinaceHarold}/>
-      <br/>
-      <h1>Head of Receptionary</h1>
-      <img src={ReceptionistHarold}/>
-      <hr/>
-      <h1>HR rep</h1>
-      <img src={HrHarold}/> */}
     </div>
   );
 }

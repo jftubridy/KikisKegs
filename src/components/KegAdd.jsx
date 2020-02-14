@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 function KegAdd(){
   return(
@@ -28,6 +30,17 @@ function KegAdd(){
         {/* <textarea
           id='alcohol'
           placeholder='Alcohol content.'/> */}
+        
+        {/* function handleClick(e) {
+          e.preventDefault();
+        alert('The keg was added');
+        }
+        return (
+          <a href='#' onClick={handleClick}>
+          <button className='btn btn-caution'>Add this Keg</button>
+          </a>
+          );    This code is trying to make a button, but is not working yet. 
+           */}
       </form>
     </div>
   );
