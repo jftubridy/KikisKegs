@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 function Kegs(props){
   return (
     <div>
-      <h3>{props.type} - {props.name}</h3>
+      <h3> Name: {props.name} - Category: {props.type}</h3>
       <p>   <style global jsx>{`
         p {
           color: red;
         }
-      `}</style><em>{props.alcohol} - {props.picture}</em></p>
+      `}</style><em>Alcohol content: {props.alcohol} - {props.picture}</em></p>
       <hr/>
     </div>
   );

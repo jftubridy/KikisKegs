@@ -8,7 +8,7 @@ function KegAdd(){
       color: black;
     }
     h1:hover {
-      color: green;
+      color: red;
     }
     `}</style>Add a Keg</h1>
     
@@ -20,10 +20,14 @@ function KegAdd(){
         <input 
           type='text'
           id='type'
-          placeholder='Type of Beverage'/>
-        <textarea
+          placeholder='Type of Beverage' />
+        <input
+          type='text'
           id='alcohol'
           placeholder='Alcohol content.'/>
+        {/* <textarea
+          id='alcohol'
+          placeholder='Alcohol content.'/> */}
       </form>
     </div>
   );

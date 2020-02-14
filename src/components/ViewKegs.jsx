@@ -11,26 +11,52 @@ import Kegs from './Kegs';
 var masterViewKegs = [
   {
     name: 'Shirley Temple',
-    location: 'Long Johns Seedy Bar',
-    issue: 'The Bartender is watering down drinks!!!'
+    type: 'Soda',
+    alcohol: 'non-alcoholic'
   },
   {
-    name: 'Bob Marley',
-    location: '4B',
-    issue: 'Smoking mid'
+    name: 'Left Hand: Milk Stout Nitro',
+    type: 'Stout',
+    alcohol: '6.0%'
   },
   {
-    name: 'Imani and Jacob',
-    location: '9F',
-    issue: 'Donkey picture not displaying on hover in Zoology app.l :()'
-  }
+    name: 'Ghostfish: Grapefruit IPA',
+    type: 'Gluten Free',
+    alcohol: '5.5%'
+  },
+  {
+    name: 'Reverend Nats: Sour Cherry',
+    type: 'Cider',
+    alcohol: '6.0%'
+  },
+  {
+    name: 'Alpenfire: Traditional Heirloom',
+    type: 'Cider',
+    alcohol: '6.5%'
+  },
+  {
+    name: 'Standard: Days in Arrears Munich Dunkel',
+    type: 'Lager',
+    alcohol: '4.8%'
+  },
+  {
+    name: 'Pfriem: Triple IPA',
+    type: 'India Pale Ale',
+    alcohol: '10.5%'
+  },
+  {
+    name: 'Alvarado Street: Local Shred Red',
+    type: 'Red IPA',
+    alcohol: '7.2%'
+  },
+
 
 ];
 
 
 function ViewKegs(){
   const PageStyle = {
-    backgroundColor: 'blue'
+    backgroundColor: '#99ccff'
   };
 
   return (
@@ -42,7 +68,7 @@ function ViewKegs(){
     h1:hover {
       color: green;
     }
-    `}</style>View Kegs</h1>
+    `}</style>Kegs currently on Tap</h1>
      
       <hr/>
       <div style = {PageStyle}>
