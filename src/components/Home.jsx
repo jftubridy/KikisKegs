@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import homepage from '../assets/images/homepage.jpg';
+import homepage from '../assets/images/kikisKegHomepage.jpg';
 
 
 function Home() {
