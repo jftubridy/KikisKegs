@@ -23,5 +23,3 @@ if (module.hot) {
     })
 }
 /*eslint-enable*/
-//this special code disables and then reenables eslint
-//its better to do ESLint configurations, like "jsx-uses-react" than disable

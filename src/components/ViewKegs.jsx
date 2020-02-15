@@ -1,12 +1,5 @@
 import React from 'react';
 import Kegs from './Kegs';
-// import CEOHarold from '../assets/images/CEOHarold.jpg';
-// import ChiefEditorHarold from '../assets/images/ChiefEditorHarold.jpg';
-// import FinaceHarold from '../assets/images/FinanceHarold.jpg';
-// import ReceptionistHarold from '../assets/images/ReceptionistHarold.jpg';
-// import HrHarold from '../assets/images/HrHarold.jpg';
-
-
 
 var masterViewKegs = [
   {
@@ -49,16 +42,12 @@ var masterViewKegs = [
     type: 'Red IPA',
     alcohol: '7.2%'
   },
-
-
 ];
-
 
 function ViewKegs(){
   const PageStyle = {
     backgroundColor: '#99ccff'
   };
-
   return (
     <div>
       <h1><style jsx> {`
@@ -71,7 +60,7 @@ function ViewKegs(){
       border-width: 1px;
     }
     h1:hover {
-      color: purple;
+      color: white;
     }
     `}</style>Kegs currently on Tap</h1>
      

@@ -14,8 +14,7 @@ function Kegs(props){
     </div>
   );
 }
-// propTypes is declaring a propTypes property on our Kegs componenent
-// PropTypes is referring to the PropTypes class we import at the top
+
 Kegs.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
@@ -24,24 +23,3 @@ Kegs.propTypes = {
 };
 
 export default Kegs;
-
-
-/*
-/MyExampleComponent.propTypes = {
-  exampleArray: PropTypes.array,
-  exampleBoolean: PropTypes.bool,
-  exampleFunction: PropTypes.func,
-  exampleNumber: PropTypes.number,
-  exampleObject: PropTypes.object,
-  exampleString: PropTypes.string,
-  exampleSymbol: PropTypes.symbol,
-  exampleReactElement: PropTypes.element,
-
-  exampleArrayOfNumbers: PropTypes.arrayOf(PropTypes.number),
-  exampleArrayOfStrings: PropTypes.arrayOf(PropTypes.string),
-
-  exampleClassTypeProp: PropTypes.instanceOf(ExampleClassName),
-
-  optionalEnum: PropTypes.oneOf(['ExampleClass', 'AnotherExampleClass']),
-}
-*/

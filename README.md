@@ -6,7 +6,7 @@
 
 ## Specs
 
-<img src="src/assets/images.RouteStructure.jpg>
+![](src/assets/images/RouteStructure.jpg)
 
 ## Setup/Installation Requirements
 
@@ -17,14 +17,15 @@
 
 ## Known Bugs
 
-_Currently one can only navigate between pages, there is no functionality to create, edit, or delete kegs._
+_Currently one can only navigate between pages, there is no functionality to create, edit, or delete kegs.
+It is also very ugly, I will fix this!_
 
 ## Technologies Used
 
-_JavaScript_
-_React_
-_webpack_
-_npm_
+* _JavaScript_
+* _React_
+* _webpack_
+* _npm_
 
 
 ### License

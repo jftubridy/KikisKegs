@@ -7,7 +7,7 @@ import Error404 from './Error404';
 import AboutUs from './AboutUs';
 import Home from './Home';
 import KegAdd from './KegAdd';
-import Image from '../assets/images/backgroundKegs.jpg';
+import Image from '../assets/images/background-wood.jpg';
 
 function App(){
   const BackgroundStyle = {
@@ -37,5 +37,5 @@ function App(){
     </div>
   );
 }
-//using exact above helps protect us from accidently loading too many things
+
 export default App;
