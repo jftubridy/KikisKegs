@@ -8,6 +8,7 @@ import AboutUs from './AboutUs';
 import Home from './Home';
 import KegAdd from './KegAdd';
 import { v4 } from 'uuid';
+import Admin from './Admin';
 import Image from '../assets/images/background-wood.jpg';
 
 const BackgroundStyle = {
@@ -51,7 +52,7 @@ class App extends React.Component {
     );
   }
 
-  handleChangingSelectedKeg(kegId) {
+  handleChangeKeg(kegId) {
     this.setState({ selectedKeg: kegId });
   }
 
@@ -61,10 +62,14 @@ class App extends React.Component {
         
         <Header/>
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' render={() => <Home home={this.state.masterKegList} />} />
           <Route exact path='/AboutUs' component={AboutUs} /> 
-          <Route path='/ViewKegs' render={() => <ViewKegs kegList={this.state.masterKegList} />} />
           <Route exact path='/KegAdd' render={() => <KegAdd onNewKegCreation={this.handleAddingKeg} />} />
+          <Route path='/ViewKegs' render={() => <ViewKegs kegList={this.state.masterKegList} />} />
+          <Route path='admin' render={(props) => <Admin viewKegs={this.state.masterKegList}
+            currentRouterPath={props.type.pathname}
+            onKegSelection={this.handleChangeKeg}
+            selectedKeg={this.state.selectedK} />} />
           <Route component={Error404} />
         </Switch>
         

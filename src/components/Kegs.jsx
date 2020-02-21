@@ -12,7 +12,7 @@ function Kegs(props) {
     return (
       <div onClick={() => {props.onKegSelection(props.kegId); }}>
         {kegInfo}
-
+        <h4>{props.drinksLeft} drinks left in keg</h4>
       </div>
     );
   } else {

@@ -1,50 +1,8 @@
 import React from 'react';
 import Kegs from './Kegs';
+import PropTypes from 'prop-types';
 
-var masterViewKegs = [
-  {
-    name: 'Shirley Temple',
-    type: 'Soda',
-    alcohol: 'non-alcoholic'
-  },
-  {
-    name: 'Left Hand: Milk Stout Nitro',
-    type: 'Stout',
-    alcohol: '6.0%'
-  },
-  {
-    name: 'Ghostfish: Grapefruit IPA',
-    type: 'Gluten Free',
-    alcohol: '5.5%'
-  },
-  {
-    name: 'Reverend Nats: Sour Cherry',
-    type: 'Cider',
-    alcohol: '6.0%'
-  },
-  {
-    name: 'Alpenfire: Traditional Heirloom',
-    type: 'Cider',
-    alcohol: '6.5%'
-  },
-  {
-    name: 'Standard: Days in Arrears Munich Dunkel',
-    type: 'Lager',
-    alcohol: '4.8%'
-  },
-  {
-    name: 'Pfriem: Triple IPA',
-    type: 'India Pale Ale',
-    alcohol: '10.5%'
-  },
-  {
-    name: 'Alvarado Street: Local Shred Red',
-    type: 'Red IPA',
-    alcohol: '7.2%'
-  },
-];
-
-function ViewKegs(){
+function ViewKegs(props){
   const PageStyle = {
     backgroundColor: '#99ccff'
   };
@@ -66,15 +24,25 @@ function ViewKegs(){
      
       <hr/>
       <div style = {PageStyle}>
-        {masterViewKegs.map((kegs, index) =>
-          <Kegs name={kegs.name}
+        {Object.keys(props.viewKegs).map(function (kegId) {
+          var kegs = props.viewKegs[kegId];
+          return <Kegs name={kegs.name}
             type={kegs.type}
             alcohol={kegs.alcohol}
-            key={index}/>
-        )}
+            drinksLeft={kegs.drinksLeft}
+            onKegSelection={kegs.onKegSelection}
+            key={kegId}
+            kegId={kegId} />;
+        })}
       </div>
     </div>
   );
 }
+
+ViewKegs.propTypes = {
+  viewKegs: PropTypes.object,
+  currentRouterPath: PropTypes.string,
+  onKegSelection: PropTypes.func
+};
 
 export default ViewKegs;
