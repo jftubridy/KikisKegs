@@ -29,11 +29,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: {},
-      selectedKeg: null
+      masterKeg: [],
+      //changed back to array from object
+      //selectedKeg: null
     };
     this.handleAddingKeg = this.handleAddingKeg.bind(this);
-    this.handleChangeKeg = this.handleChangeKeg.bind(this);
+    //this.handleChangeKeg = this.handleChangeKeg.bind(this);
   }
 
   componentDidMount() {
@@ -42,14 +43,23 @@ class App extends React.Component {
   componentWillUnmount() {
   }
 
+  updateKegTime() {
+    let newMasterKeg = this.state.masterKeg.slice();
+  }
+
   handleAddingKeg(newKeg) {
-    var newKegId = v4();
-    var newMasterKegList = Object.assign({}, this.state.masterKegList, {
-      [newKegId]: newKeg
-    });
-    //Object.keys(newMasterKegList).
-    this.setState({ masterKegList: newMasterKegList }
-    );
+    //var newKegId = v4();
+    var newMasterKeg = this.state.masterKeg.slice();
+    newMasterKeg.push(newKeg);
+    this.setState({ masterKeg: newMasterKeg });
+    //changed to this masterkeg var to see if it fixes.
+
+    // var newMasterKeg = Object.assign({}, this.state.masterKeg, {
+    //   [newKegId]: newKeg
+    // });
+    // //Object.keys(newMasterKeg).
+    // this.setState({ masterKeg: newMasterKeg }
+    // );
   }
 
   handleChangeKeg(kegId) {
@@ -62,11 +72,14 @@ class App extends React.Component {
         
         <Header/>
         <Switch>
-          <Route exact path='/' render={() => <Home home={this.state.masterKegList} />} />
+          {/* <Route exact path='/' render={() => <Home home={this.state.masterKeg} />} /> */}
+          <Route exact path='/' component={Home} />
           <Route exact path='/AboutUs' component={AboutUs} /> 
-          <Route exact path='/KegAdd' render={() => <KegAdd onNewKegCreation={this.handleAddingKeg} />} />
-          <Route path='/ViewKegs' render={() => <ViewKegs kegList={this.state.masterKegList} />} />
-          <Route path='admin' render={(props) => <Admin viewKegs={this.state.masterKegList}
+          <Route exact path='/KegAdd' render={() => <KegAdd onKegCreation={this.handleAddingKeg} />} />
+          {/* <Route exact path='/KegAdd' component={KegAdd} /> */}
+          {/* <Route path='/ViewKegs' render={() => <ViewKegs kegList={this.state.masterKeg} />} /> */}
+          <Route exact path='/ViewKegs' component={ViewKegs} />
+          <Route path='admin' render={(props) => <Admin viewKegs={this.state.masterKeg}
             currentRouterPath={props.type.pathname}
             onKegSelection={this.handleChangeKeg}
             selectedKeg={this.state.selectedK} />} />

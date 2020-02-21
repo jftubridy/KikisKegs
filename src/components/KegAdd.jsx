@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
+//import Moment from 'moment';
 
 function KegAdd(props) {
   let _name = null;
@@ -9,7 +10,7 @@ function KegAdd(props) {
 
   function handleNewKegSubmission(event) {
     event.preventDefault();
-    props.onKegCreation({ name: _name.value, type: _type.value, alcohol: _alcohol.value, id: v4() });
+    props.onKegCreation({ name: _name.value, type: _type.value, alcohol: _alcohol.value, id: v4(), drinks: 165 });
     _name.value = '';
     _type.value = '';
     _alcohol.value = '';

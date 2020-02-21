@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DrinksControl from './DrinksControl';
 
 function Kegs(props) {
   const kegInfo =
@@ -12,12 +13,14 @@ function Kegs(props) {
     return (
       <div onClick={() => {props.onKegSelection(props.kegId); }}>
         {kegInfo}
+        <DrinksControl />
         <h4>{props.drinksLeft} drinks left in keg</h4>
       </div>
     );
   } else {
     return (
       <div>
+        <DrinksControl />
         {kegInfo}
         <hr/>
       </div>
@@ -29,6 +32,7 @@ Kegs.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   alcohol: PropTypes.string,
+  drinks: PropTypes.number,
   picture: PropTypes.string,
   onKegSelection: PropTypes.func
 };
