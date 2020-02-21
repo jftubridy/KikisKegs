@@ -1,6 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { v4 } from 'uuid';
 
-function KegAdd(){
+function KegAdd(props) {
+  let _name = null;
+  let _type = null;
+  let _alcohol = null;
+
+  function handleNewKegSubmission(event) {
+    event.preventDefault();
+    props.onKegCreation({ name: _name.value, type: _type.value, alcohol: _alcohol.value, id: v4() });
+    _name.value = '';
+    _type.value = '';
+    _alcohol.value = '';
+  }
+
   return(
     <div>
       <h1><style jsx> {`
@@ -12,22 +26,30 @@ function KegAdd(){
     }
     `}</style>Add a Keg</h1>
     
-      <form>
+      <form onSubmit={handleNewKegSubmission}>
         <input  
           type='text'
           id='name'
-          placeholder="Beverage Name"/>
+          placeholder='Beverage Name'
+          ref={(input) => {_name = input;}}/>
         <input 
           type='text'
           id='type'
-          placeholder='Type of Beverage' />
+          placeholder='Type of Beverage'
+          ref={(input) => {_type = input;}}/>
         <input
           type='text'
           id='alcohol'
-          placeholder='Alcohol content.'/>
+          placeholder='Alcohol content.'
+          ref={(input) => { _alcohol = input; }} />
+        <button type='submit'>Add Keg</button>
       </form>
     </div>
   );
 }
+
+KegAdd.propTypes = {
+  onKegCreation: PropTypes.func
+};
 
 export default KegAdd;

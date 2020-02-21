@@ -16,7 +16,6 @@ function Home() {
     // }
     h1:hover {
       color: black;
-      font-family: wingdings;
     }
     `}</style>Kikis Kegs</h1>
       <img src={homepage}/>
