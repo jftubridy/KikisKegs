@@ -22,9 +22,9 @@ function ViewKegs(props){
     }
     `}</style>Kegs currently on Tap</h1>
      
-      <hr/>
       <div style = {PageStyle}>
-        {/* {Object.keys(props.viewKegs).map(function (kegId) {
+        <hr/>
+        {Object.keys(props.viewKegs).map(function (kegId) {
           var kegs = props.viewKegs[kegId];
           return <Kegs name={kegs.name}
             type={kegs.type}
@@ -33,15 +33,14 @@ function ViewKegs(props){
             onKegSelection={kegs.onKegSelection}
             key={kegId}
             kegId={kegId} />;
-        })} */}
-
-        {props.viewKegs.map((kegs) => 
+        })}
+        {/* {props.viewKegs.map((kegs) => 
           <Kegs name={kegs.name}
             type={kegs.type}
             alcohol={kegs.alcohol}
             drinks={kegs.drinks}
             key={kegs.id} />
-        )}
+        )} */}
       </div>
     </div>
   );

@@ -43,12 +43,8 @@ class App extends React.Component {
   componentWillUnmount() {
   }
 
-  updateKegTime() {
-    let newMasterKeg = this.state.masterKeg.slice();
-  }
-
   handleAddingKeg(newKeg) {
-    //var newKegId = v4();
+    // var newKegId = v4();
     var newMasterKeg = this.state.masterKeg.slice();
     newMasterKeg.push(newKeg);
     this.setState({ masterKeg: newMasterKeg });
@@ -77,8 +73,8 @@ class App extends React.Component {
           <Route exact path='/AboutUs' component={AboutUs} /> 
           <Route exact path='/KegAdd' render={() => <KegAdd onKegCreation={this.handleAddingKeg} />} />
           {/* <Route exact path='/KegAdd' component={KegAdd} /> */}
-          {/* <Route path='/ViewKegs' render={() => <ViewKegs kegList={this.state.masterKeg} />} /> */}
-          <Route exact path='/ViewKegs' component={ViewKegs} />
+          <Route path='/ViewKegs' render={() => <ViewKegs viewKegs={this.state.masterKeg} />} />
+          {/* <Route exact path='/ViewKegs' component={ViewKegs} /> */}
           <Route path='admin' render={(props) => <Admin viewKegs={this.state.masterKeg}
             currentRouterPath={props.type.pathname}
             onKegSelection={this.handleChangeKeg}
