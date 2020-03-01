@@ -5,10 +5,8 @@
 
 This is a react applcation that displays and tracks the beverages available at a tap house.  It was created to practice using state.
 
-## Specs
-```bash
 ![](src/assets/images/Updated-kikis-component-structure.jpg)
-```
+
 ## Setup/Installation Requirements
 ```bash
 1. Clone this repository.
