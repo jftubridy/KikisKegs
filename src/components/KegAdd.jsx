@@ -10,7 +10,7 @@ function KegAdd(props) {
 
   function handleNewKegSubmission(event) {
     event.preventDefault();
-    props.onKegCreation({ name: _name.value, type: _type.value, alcohol: _alcohol.value, id: v4(), drinks: 165 });
+    props.onKegCreation({ name: _name.value, type: _type.value, alcohol: _alcohol.value, id: v4() });
     _name.value = '';
     _type.value = '';
     _alcohol.value = '';
