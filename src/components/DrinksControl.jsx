@@ -17,19 +17,6 @@ class DrinksControl extends React.Component {
       drinks: this.state.drinks - 1,
     });
   }
-    
-  // componentDidMount() {
-  //   this.drinkTimer = setInterval(() =>
-  //     this.handleDrinkTimer(),
-  //   2000
-  //   );
-  // }
-
-  // handleDrinkTimer() {
-  //   this.setState({
-  //     drinks: this.state.drinks - 1
-  //   });
-  // }
 
   render() {
     return (

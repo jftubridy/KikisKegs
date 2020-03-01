@@ -8,7 +8,6 @@ function KegDetail(props) {
       <h2>{props.selectedKeg.name}</h2>
       <h3>{props.selectedKeg.type} - {props.selectedKeg.alcohol}</h3>
       <h3>{props.selectedKeg.drinksLeft}</h3>
-      {/* will track number of drinks left in keg out of 165 */}
     </div>
   );
 }

@@ -34,13 +34,6 @@ function ViewKegs(props){
             key={kegId}
             kegId={kegId} />;
         })}
-        {/* {props.viewKegs.map((kegs) => 
-          <Kegs name={kegs.name}
-            type={kegs.type}
-            alcohol={kegs.alcohol}
-            drinks={kegs.drinks}
-            key={kegs.id} />
-        )} */}
       </div>
     </div>
   );
@@ -48,7 +41,6 @@ function ViewKegs(props){
 
 ViewKegs.propTypes = {
   viewKegs: PropTypes.array,
-  //viewKegs: PropTypes.object,
   currentRouterPath: PropTypes.string,
   onKegSelection: PropTypes.func
 };
