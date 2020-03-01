@@ -6,7 +6,7 @@
 
 ## Specs
 
-![](src/assets/images/RouteStructure.jpg)
+![](src/assets/images/Updated-kikis-component-structure.jpg)
 
 ## Setup/Installation Requirements
 
