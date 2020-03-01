@@ -2,31 +2,32 @@
 ### By Joseph Tubridy
 
 ## Description
-*  _This is a Web app that displays and tracks the beverages available at a tap house._
-
+```bash
+This is a react applcation that displays and tracks the beverages available at a tap house.  It was created to practice using state.
+```
 ## Specs
 
 ![](src/assets/images/Updated-kikis-component-structure.jpg)
 
 ## Setup/Installation Requirements
-
-* _Clone this repository._
-* _Type "npm install" in your console._
-* _Type "npm run start" in your console._
-* _Navigate to https://localhost:8080/ in your browser._
+```bash
+1. Clone this repository.
+2. Type "npm install" in your console.
+3. Type "npm run start" in your console.
+4. Navigate to https://localhost:8080/ in your browser.
+```
 
 ## Known Bugs
 ```bash
-_While one can add kegs, and count the number of drinks left.  If they leave then return to view the kegs, the drink counters will have reset._
+While one can add kegs, and count the number of drinks left.  If they leave then return to view the kegs, the drink counters will have reset.
 ```
 ## Technologies Used
 ```bash
-* _JavaScript_
-* _React_
-* _webpack_
-* _npm_
+-JavaScript
+-React
+-webpack
+-npm
 ```
-
 
 ### License
 
