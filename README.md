@@ -2,13 +2,13 @@
 ### By Joseph Tubridy
 
 ## Description
-```bash
+
 This is a react applcation that displays and tracks the beverages available at a tap house.  It was created to practice using state.
-```
+
 ## Specs
-
+```bash
 ![](src/assets/images/Updated-kikis-component-structure.jpg)
-
+```
 ## Setup/Installation Requirements
 ```bash
 1. Clone this repository.
@@ -18,9 +18,9 @@ This is a react applcation that displays and tracks the beverages available at a
 ```
 
 ## Known Bugs
-```bash
+
 While one can add kegs, and count the number of drinks left.  If they leave then return to view the kegs, the drink counters will have reset.
-```
+
 ## Technologies Used
 ```bash
 -JavaScript
