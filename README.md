@@ -16,16 +16,16 @@
 * _Navigate to https://localhost:8080/ in your browser._
 
 ## Known Bugs
-
-_Currently one can only navigate between pages, there is no functionality to create, edit, or delete kegs.
-It is also very ugly, I will fix this!_
-
+```bash
+_While one can add kegs, and count the number of drinks left.  If they leave then return to view the kegs, the drink counters will have reset._
+```
 ## Technologies Used
-
+```bash
 * _JavaScript_
 * _React_
 * _webpack_
 * _npm_
+```
 
 
 ### License
